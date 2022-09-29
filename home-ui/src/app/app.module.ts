@@ -3,18 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './modules/feature/secure/home/home.component';
-import { NotFoundComponent } from './modules/feature/secure/not-found/not-found.component';
+import { SecureLayoutModule } from './modules/layout/secure-layout/secure-layout.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent,
-    NotFoundComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SecureLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
