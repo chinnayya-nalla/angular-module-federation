@@ -12,7 +12,7 @@ const routes: Routes = [
       {
         // Way 1 => Loading using Declarations
         path: 'locations',
-        loadChildren: () => import('locations/LocationsModule').then((module) => module.LocationsModule) 
+        loadChildren: () => import('locations/Module').then((module) => module.AppModule) 
       },
       {
         // Way 2 => Loading by Providing URL in Routing

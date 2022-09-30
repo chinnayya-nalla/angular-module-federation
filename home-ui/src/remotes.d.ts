@@ -1,2 +1,2 @@
-declare module 'locations/LocationsModule';
+declare module 'locations/Module';
 declare module 'contacts/ContactUsModule';
