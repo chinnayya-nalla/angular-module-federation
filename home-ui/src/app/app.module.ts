@@ -3,10 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SecureLayoutModule } from './modules/layout/secure-layout/secure-layout.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './modules/shared/module/shared.module';
+import { SecureModule } from './modules/layout/secure/secure.module';
 
 @NgModule({
   declarations: [
@@ -15,8 +15,8 @@ import { SharedModule } from './modules/shared/module/shared.module';
   imports: [
     SharedModule,
     BrowserModule,
+    SecureModule,
     AppRoutingModule,
-    SecureLayoutModule,
     BrowserAnimationsModule
   ],
   providers: [],

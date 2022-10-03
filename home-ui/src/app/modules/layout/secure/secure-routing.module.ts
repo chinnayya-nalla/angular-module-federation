@@ -2,12 +2,12 @@ import { loadRemoteModule } from '@angular-architects/module-federation';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from '../../core/component/not-found/not-found.component';
-import { SecureLayoutComponent } from './secure-layout.component';
+import { SecureComponent } from './secure.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: SecureLayoutComponent,
+    component: SecureComponent,
     children: [
       {
         // Way 1 => Loading using Declarations
@@ -38,4 +38,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class SecureLayoutRoutingModule { }
+export class SecureRoutingModule { }
