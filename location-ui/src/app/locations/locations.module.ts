@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { LocationsRoutingModule } from './locations-routing.module';
 import { AsiaComponent } from './asia/asia.component';
 
+import { MatSidenavModule } from '@angular/material/sidenav';
+
 
 @NgModule({
   declarations: [
@@ -11,7 +13,8 @@ import { AsiaComponent } from './asia/asia.component';
   ],
   imports: [
     CommonModule,
-    LocationsRoutingModule
+    LocationsRoutingModule,
+    MatSidenavModule  
   ]
 })
 export class LocationsModule { }

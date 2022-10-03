@@ -1,7 +1,7 @@
 import { loadRemoteModule } from '@angular-architects/module-federation';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NotFoundComponent } from '../../feature/common/not-found/not-found.component';
+import { NotFoundComponent } from '../../core/component/not-found/not-found.component';
 import { SecureLayoutComponent } from './secure-layout.component';
 
 const routes: Routes = [

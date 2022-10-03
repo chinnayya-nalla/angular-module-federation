@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SecureLayoutModule } from './modules/layout/secure-layout/secure-layout.module';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -12,7 +14,8 @@ import { SecureLayoutModule } from './modules/layout/secure-layout/secure-layout
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SecureLayoutModule
+    SecureLayoutModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
