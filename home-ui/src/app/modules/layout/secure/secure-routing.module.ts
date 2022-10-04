@@ -17,7 +17,7 @@ const routes: Routes = [
       {
         // Way 1 => Loading using Declarations
         path: 'locations',
-        loadChildren: () => import('locations/Module').then((module) => module.AppModule) 
+        loadChildren: () => import('locations/RemoteAppModule').then((module) => module.RemoteAppModule) 
       },
       {
         // Way 2 => Loading by Providing URL in Routing

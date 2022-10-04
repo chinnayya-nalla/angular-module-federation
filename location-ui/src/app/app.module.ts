@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { RemoteAppModule } from './remote-app.module';
 import { HomeComponent } from './home/home.component';
-import { LocationsModule } from './locations/locations.module';
 
 @NgModule({
   declarations: [
@@ -11,8 +12,9 @@ import { LocationsModule } from './locations/locations.module';
     HomeComponent
   ],
   imports: [
+    BrowserModule,
     AppRoutingModule,
-    LocationsModule
+    RemoteAppModule
   ],
   providers: [],
   bootstrap: [AppComponent]

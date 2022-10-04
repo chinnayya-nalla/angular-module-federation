@@ -1,2 +1,2 @@
-declare module 'locations/Module';
+declare module 'locations/RemoteAppModule';
 declare module 'contacts/ContactUsModule';
