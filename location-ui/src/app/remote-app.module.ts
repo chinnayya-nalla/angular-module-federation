@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LocationsModule } from 'src/app/locations/locations.module';
-
-
+import { LocationsModule } from './modules/feature/secure/locations/locations.module';
 
 @NgModule({
   declarations: [],
