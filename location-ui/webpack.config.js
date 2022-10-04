@@ -31,12 +31,6 @@ module.exports = {
           './RemoteAppModule': './src/app/remote-app.module.ts',
         },        
         
-        // For hosts (please adjust)
-        // remotes: {
-        //     "mfe1": "mfe1@http://localhost:3000/remoteEntry.js",
-
-        // },
-
         shared: share({
           "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' }, 
           "@angular/common": { singleton: true, strictVersion: true, requiredVersion: 'auto' }, 
