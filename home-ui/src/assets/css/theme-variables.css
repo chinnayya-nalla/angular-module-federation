@@ -1,0 +1,145 @@
+:root {
+    /* Navbar logo */
+    --lib-logo-image:150px;
+    /* Color Themes */
+    --system-dark: #E8E8E8;
+    --system-mawani: #F3F5F7;
+    --system-cns: #F5F8F8;
+    --system-light: #FAFAFA;
+  
+    --primary-color-100: #183C60;
+    --primary-color-90: #2F5070;
+    --primary-color-80: #466380;
+    --primary-color-70: #5D7790;
+    --primary-color-60: #748AA0;
+    --primary-color-50: #8B9DAF;
+    --primary-color-40: #A3B1BF;
+    --primary-color-30: #BAC5CF;
+    --primary-color-20: #D1D8DF;
+    --primary-color-10: #E8ECEF;
+  
+    --secondary-color-100: #69D3F1;
+    --secondary-color-90: #78D7F2;
+    --secondary-color-80: #87DCF4;
+    --secondary-color-70: #96E0F5;
+    --secondary-color-60: #A5E5F7;
+    --secondary-color-50: #B4E9F8;
+    --secondary-color-40: #C3EDF9;
+    --secondary-color-30: #D2F2FB;
+    --secondary-color-20: #E1F6FC;
+    --secondary-color-10: #F0FBFE;
+  
+    --tertiary-color-100: #EFAF17;
+    --tertiary-color-90: #F1B72E;
+    --tertiary-color-80: #F2BF45;
+    --tertiary-color-70: #F4C75D;
+    --tertiary-color-60: #F5CF74;
+    --tertiary-color-50: #F7D78B;
+    --tertiary-color-40: #F9DFA2;
+    --tertiary-color-30: #FAE7B9;
+    --tertiary-color-20: #FCEFD1;
+    --tertiary-color-10: #FDF7E8;
+  
+    --accent-dark: #0053CB;
+    --accent-medium: #2196F3;
+    --accent-light: #E3F2FD;
+  
+    --success-dark: #00C853;
+    --success-medium: #00E676;
+    --success-light: #ECF9F3;
+  
+    --warning-dark: #FFA000;
+    --warning-medium: #FFC107;
+    --warning-light: #FFF5E5;
+  
+    --error-dark: #C62828;
+    --error-medium: #E53935;
+    --error-light: #FCE7E7;
+  
+    --black-high: #212121;
+    --black-medium: #666666;
+    --black-low: #757575;
+  
+    --disabled-high: #B1B1B1;
+    --disabled-medium: #CFCFCF;
+    --disabled-low: #ECECEC;
+  
+    --grey-high: #C2C2C2;
+    --grey-medium: #E5E5E5;
+    --grey-low: #F5F5F5;
+  
+    --white: #FFFFFF;
+  
+    /* Font Themes */
+    --mawani-font: Open Sans;
+  
+    --h1-font-size: 96px;
+    --h1-font-weight: 300;
+    --h1-line-height: 144px;
+    --h1-letter-spacing: -1.5px;
+  
+    --h2-font-size: 60px;
+    --h2-font-weight: 300;
+    --h2-line-height: 90px;
+    --h2-letter-spacing: -0.5px;
+  
+    --h3-font-size: 48px;
+    --h3-font-weight: 400;
+    --h3-line-height: 72px;
+    --h3-letter-spacing: 0px;
+  
+    --h4-font-size: 34px;
+    --h4-font-weight: 400;
+    --h4-line-height: 51px;
+    --h4-letter-spacing: 0.3px;
+  
+    --h5-font-size: 24px;
+    --h5-font-weight: 400;
+    --h5-line-height: 36px;
+    --h5-letter-spacing: 0px;
+  
+    --h6-font-size: 20px;
+    --h6-font-weight: 400;
+    --h6-line-height: 30px;
+    --h6-letter-spacing: 0.2px;
+  
+    --body1-font-size: 16px;
+    --body1-font-weight: 400;
+    --body1-line-height: 24px;
+    --body1-letter-spacing: 0.5px;
+  
+    --body2-font-size: 14px;
+    --body2-font-weight: 400;
+    --body2-line-height: 21px;
+    --body2-letter-spacing: 0.3px;
+  
+    --subtitle1-font-size: 16px;
+    --subtitle1-font-weight: 400;
+    --subtitle1-line-height: 24px;
+    --subtitle1-letter-spacing: 0.2px;
+  
+    --subtitle2-font-size: 14px;
+    --subtitle2-font-weight: 600;
+    --subtitle2-line-height: 21px;
+    --subtitle2-letter-spacing: 0.1px;
+  
+    --button-font-size: 14px;
+    --button-font-weight: 600;
+    --button-line-height: 16px;
+    --button-letter-spacing: 1.3px;
+  
+    --caption-font-size: 12px;
+    --caption-font-weight: 400;
+    --caption-line-height: 15px;
+    --caption-letter-spacing: 0.4px;
+  
+    --link-font-size: 14px;
+    --link-font-weight: 400;
+    --link-line-height: 21px;
+    --link-letter-spacing: 0.3px;
+  
+    --overline-font-size: 10px;
+    --overline-font-weight: 400;
+    --overline-line-height: 12px;
+    --overline-letter-spacing: 1.5px;
+  }
