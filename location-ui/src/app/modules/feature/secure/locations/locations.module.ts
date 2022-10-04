@@ -5,6 +5,7 @@ import { LocationsRoutingModule } from './locations-routing.module';
 
 import { EuropeComponent } from './europe/europe.component';
 import { AsiaComponent } from './asia/asia.component';
+import { SharedModule } from 'src/app/modules/shared/module/shared.module';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { AsiaComponent } from './asia/asia.component';
   ],
   imports: [
     CommonModule,
+    SharedModule,
     LocationsRoutingModule
   ]
 })
