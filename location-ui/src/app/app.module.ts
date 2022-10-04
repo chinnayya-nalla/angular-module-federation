@@ -7,6 +7,8 @@ import { HomeComponent } from './modules/feature/secure/home/home.component';
 import { SharedModule } from './modules/shared/module/shared.module';
 import { RemoteAppModule } from './remote-app.module';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,8 @@ import { RemoteAppModule } from './remote-app.module';
     BrowserModule,
     SharedModule,
     AppRoutingModule,
-    RemoteAppModule
+    RemoteAppModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
