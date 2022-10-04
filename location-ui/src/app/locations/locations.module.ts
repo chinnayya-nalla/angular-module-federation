@@ -5,11 +5,13 @@ import { LocationsRoutingModule } from './locations-routing.module';
 import { AsiaComponent } from './asia/asia.component';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { EuropeComponent } from './europe/europe.component';
 
 
 @NgModule({
   declarations: [
-    AsiaComponent
+    AsiaComponent,
+    EuropeComponent
   ],
   imports: [
     CommonModule,
