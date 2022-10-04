@@ -1,9 +1,49 @@
-<p>Europe Location!</p>
-<img class="img-responsive" src="http://localhost:4100/assets/images/image1.png" />
+<div class="row mb-1">
+    <div class="col-md-12">
+      <h6 class="text-primary-100 my-2">
+        Europe
+      </h6>
+    </div>
+</div>
 
-<ul >
-    <li>Germany</li>
-    <li>France</li>
-    <li>Scotland</li>
-    <li>Ireland</li>
-</ul>
+<div class="row">
+    <div class="col-12 mb-2">
+
+        <form>
+            <div class="row clearfix justify-content-start">
+              <div class="col-md-4">
+                <mat-form-field appearance="outline" class="_fullWidth">
+                  <mat-label class="position-relative pl-4">
+                    <mat-icon class="position-absolute font-weight-bold" style="top: 0; left:0; font-size: 18px;">
+                      search
+                    </mat-icon>
+                    Page Container
+                  </mat-label>
+                  <input matInput formControlName="containers" />
+                </mat-form-field>
+              </div>
+            </div>
+        </form>
+
+        <img class="img-responsive" src="http://localhost:4100/assets/images/image1.png" />
+        <ul >
+            <li>Germany</li>
+            <li>France</li>
+            <li>Scotland</li>
+            <li>Ireland</li>
+        </ul>
+
+        <div class="row my-4">
+            <div class="col-md-12 d-flex align-items-center flex-column py-5">
+                <span class="noDataFoundImg">
+                    <img src="https://catest-community.cargoes.com/tosservices/assets/images/emptyContainer.png" alt="No Data Found" />
+                </span>
+                <label class="subtitle font-weight-bold">No Containers to display</label>
+                <label class="subtitle m-0 text-primary-100">Start your search by entering</label>
+                <label class="subtitle m-0 text-primary-100">Container Number or BOL</label>
+            </div>
+        </div>
+
+    </div>
+</div>
+
