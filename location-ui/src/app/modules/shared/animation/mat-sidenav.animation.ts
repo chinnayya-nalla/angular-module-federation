@@ -1,7 +1,7 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 
-export const onSideNavChange = trigger('onSideNavChange', [
+export const toggleSideNav = trigger('toggleSideNav', [
   state('close',
     style({
       'min-width': '50px'
@@ -17,7 +17,7 @@ export const onSideNavChange = trigger('onSideNavChange', [
 ]);
 
 
-export const onMainContentChange = trigger('onMainContentChange', [
+export const toggleSideNavContent = trigger('toggleSideNavContent', [
   state('close',
     style({
       'margin-left': '68px'
@@ -33,7 +33,7 @@ export const onMainContentChange = trigger('onMainContentChange', [
 ]);
 
 
-export const animateText = trigger('animateText', [
+export const toggleContent = trigger('toggleContent', [
   state('hide',
     style({
       'display': 'none',
@@ -50,7 +50,7 @@ export const animateText = trigger('animateText', [
   transition('open => close', animate('200ms ease-out')),
 ]);
 
-export const onCollapseBtnChange = trigger('onCollapseBtnChange', [
+export const toggleSideNavButton = trigger('toggleSideNavButton', [
   state('close',
     style({
       'left': '47px'

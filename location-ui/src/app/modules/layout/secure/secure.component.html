@@ -1,6 +1,6 @@
 <button mat-icon-button color="primary" 
     (click)="matSidenavService.toogle()"
-    [@onCollapseBtnChange]="matSidenavService.state ? 'open' : 'close'"
+    [@toggleSideNavButton]="matSidenavService.state ? 'open' : 'close'"
     [ngClass]="{
         showLeftIcon: matSidenavService.state,
         showRightIcon: !matSidenavService.state,
@@ -23,7 +23,7 @@
     </mat-sidenav>
     
     <mat-sidenav-content 
-        [@onMainContentChange]="matSidenavService.state ? 'open' : 'close'"
+        [@toggleSideNavContent]="matSidenavService.state ? 'open' : 'close'"
         style="z-index:auto; overflow: hidden; margin-left: 240px;">
         <div class="col-12">
             <router-outlet></router-outlet>

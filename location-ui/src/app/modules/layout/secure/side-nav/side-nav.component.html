@@ -1,16 +1,15 @@
-<!-- Start of Test Code -->
-<div class="sidenav_container" [@onSideNavChange]="matSidenavService.state ? 'open' : 'close'">
+<div class="sidenav_container" [@toggleSideNav]="matSidenavService.state ? 'open' : 'close'">
 
 <div class="px-2 my-2 d-flex align-items-center" [ngClass]="matSidenavService.sideNavState ? 'justify-content-start' : 'justify-content-center'">
     <img src="https://catest-community.cargoes.com/images/icons/Container_Enquiry.svg" width="32" />
-    <div mat-line class="pl-2 sidenavTitle" [@animateText]="matSidenavService.sideNavState ? 'show' : 'hide'">
+    <div mat-line class="pl-2 sidenavTitle" [@toggleContent]="matSidenavService.sideNavState ? 'show' : 'hide'">
         Container Clearance
     </div>
 </div>
 
 <mat-nav-list class="px-2">
     <div mat-subheader class="py-2" [ngClass]="{ customHeight32: !matSidenavService.sideNavState }">
-        <span [@animateText]="matSidenavService.sideNavState ? 'show' : 'hide'"> Search </span>
+        <span [@toggleContent]="matSidenavService.sideNavState ? 'show' : 'hide'"> Search </span>
     </div>
     <a mat-list-item class="py-1 my-1 text-primary-100 handCursor rounded"
         routerLink="./europe"
@@ -18,7 +17,7 @@
         <mat-icon mat-list-icon class="d-flex align-items-center">
             <img src="https://catest-community.cargoes.com/images/icons/Container_Enquiry.svg" style="width: 100%;" />
         </mat-icon>
-        <div mat-line class="pl-2" [@animateText]="matSidenavService.sideNavState ? 'show' : 'hide'">
+        <div mat-line class="pl-2" [@toggleContent]="matSidenavService.sideNavState ? 'show' : 'hide'">
             Containers
         </div>
     </a>
@@ -28,7 +27,7 @@
         <mat-icon mat-list-icon class="d-flex align-items-center">
             <img src="https://catest-community.cargoes.com/images/icons/Container_Enquiry.svg" style="width: 100%;" />
         </mat-icon>
-        <div mat-line class="pl-2" [@animateText]="matSidenavService.sideNavState ? 'show' : 'hide'">
+        <div mat-line class="pl-2" [@toggleContent]="matSidenavService.sideNavState ? 'show' : 'hide'">
             Containers
         </div>
     </a>
@@ -42,14 +41,14 @@
         <mat-list-item role="listitem" class="py-1 my-1 text-primary-100 handCursor rounded"
             [ngClass]="{ 'd-flex justify-content-center' : !matSidenavService.sideNavState }">
             <mat-icon mat-list-icon class="pl-1">help_outline</mat-icon>
-            <div mat-line class="pl-2" [@animateText]="matSidenavService.sideNavState ? 'show' : 'hide'">
+            <div mat-line class="pl-2" [@toggleContent]="matSidenavService.sideNavState ? 'show' : 'hide'">
               Help & Support
             </div>
           </mat-list-item>
           <mat-list-item role="listitem" class="py-1 my-1 text-primary-100 handCursor rounded" style="font-size: 12px;"
             [ngClass]="{ 'd-flex justify-content-center' : !matSidenavService.sideNavState }">
             <mat-icon mat-list-icon class="pl-1" style="font-size: 18px;height:18px;width: 22px;margin-left: 3px;">copyright</mat-icon>
-            <div mat-line class="pl-2" [@animateText]="matSidenavService.sideNavState ? 'show' : 'hide'">
+            <div mat-line class="pl-2" [@toggleContent]="matSidenavService.sideNavState ? 'show' : 'hide'">
               Terms & Conditions
             </div>
           </mat-list-item>
@@ -57,4 +56,3 @@
 </div>
 
 </div>
-<!-- End of Test Code -->
