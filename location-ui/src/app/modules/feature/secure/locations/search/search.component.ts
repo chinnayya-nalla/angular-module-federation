@@ -3,11 +3,11 @@ import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 
 @Component({
-  selector: 'app-europe',
-  templateUrl: './europe.component.html',
-  styleUrls: [ './europe.component.css' ]
+  selector: 'app-search',
+  templateUrl: './search.component.html',
+  styleUrls: [ './search.component.css' ]
 })
-export class EuropeComponent implements AfterViewInit {
+export class SearchComponent implements AfterViewInit {
 
   showMore = false;
   totalRecords = ELEMENT_DATA.length;

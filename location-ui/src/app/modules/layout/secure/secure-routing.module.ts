@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AsiaComponent } from '../../feature/secure/locations/asia/asia.component';
-import { EuropeComponent } from '../../feature/secure/locations/europe/europe.component';
+import { CreateComponent } from '../../feature/secure/locations/create/create.component';
+import { SearchComponent } from '../../feature/secure/locations/search/search.component';
 import { SecureComponent } from './secure.component';
 
 const routes: Routes = [
@@ -10,12 +10,12 @@ const routes: Routes = [
     component: SecureComponent,
     children: [
       {
-        path: 'asia',
-        component: AsiaComponent
+        path: 'create',
+        component: CreateComponent
       },
       {
-        path: 'europe',
-        component: EuropeComponent
+        path: 'search',
+        component: SearchComponent
       }
     ]
   }
