@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { toggleContent, toggleSideNavButton, toggleSideNavContent, toggleSideNav } from '../../shared/animation/mat-sidenav.animation';
+import { toggleSideNavButton, toggleSideNavContent } from '../../shared/animation/mat-sidenav.animation';
 import { MatSidenavService } from '../../shared/service/mat-sidenav.service';
 
 @Component({
   selector: 'app-secure',
   templateUrl: './secure.component.html',
   styleUrls: [ './secure.component.css' ],
-  animations: [ toggleSideNavButton, toggleSideNavContent, toggleSideNav, toggleContent ]
+  animations: [ toggleSideNavButton, toggleSideNavContent ]
 })
 export class SecureComponent implements OnInit {
 

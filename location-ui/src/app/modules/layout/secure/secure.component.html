@@ -12,19 +12,11 @@
 
 <mat-sidenav-container class="sidenav-container" style="z-index:auto;" hasBackdrop="false">
     
-    <mat-sidenav 
-        #leftSidenav 
-        fixedTopGap="65"
-        [opened]="true"
-        class="fixedSidenav">
-        
+    <mat-sidenav #leftSidenav fixedTopGap="65" [opened]="true" class="fixedSidenav">
         <app-side-nav></app-side-nav>
-
     </mat-sidenav>
     
-    <mat-sidenav-content 
-        [@toggleSideNavContent]="matSidenavService.state ? 'open' : 'close'"
-        style="z-index:auto; overflow: hidden; margin-left: 240px;">
+    <mat-sidenav-content [@toggleSideNavContent]="matSidenavService.state ? 'open' : 'close'" style="z-index:auto; overflow: hidden; margin-left: 240px;">
         <div class="col-12">
             <router-outlet></router-outlet>
         </div>
