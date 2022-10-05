@@ -1,22 +1,29 @@
-import { Injectable } from "@angular/core";
+import { Injectable, OnInit } from "@angular/core";
 import { Subject } from "rxjs";
 
 @Injectable()
-export class MatSidenavService {
+export class MatSidenavService implements OnInit {
   
-  public linkText: boolean = true;
+
+  public state: boolean = true;
   public sideNavState: boolean = true;
-  public sideNavState$: Subject<boolean> = new Subject();
+  public sideNav$: Subject<boolean> = new Subject();
   
   constructor() {}
 
-  onSinenavToggle() {
-    this.sideNavState = !this.sideNavState;
+  ngOnInit(): void {
+    this.sideNav$.subscribe((result) => {
+      this.state = result;
+    });
+  }
+
+  public toogle() {
+    this.state = !this.state;
 
     setTimeout(() => {
-      this.linkText = this.sideNavState;
+      this.sideNavState = this.state;
     }, 200);
-    this.sideNavState$.next(this.sideNavState);
+    this.sideNav$.next(this.state);
   }
 
 }

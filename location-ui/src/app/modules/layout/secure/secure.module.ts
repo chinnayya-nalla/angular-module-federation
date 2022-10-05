@@ -6,13 +6,15 @@ import { SecureComponent } from './secure.component';
 import { SharedModule } from '../../shared/module/shared.module';
 import { EuropeComponent } from '../../feature/secure/locations/europe/europe.component';
 import { AsiaComponent } from '../../feature/secure/locations/asia/asia.component';
+import { SideNavComponent } from './side-nav/side-nav.component';
 
 
 @NgModule({
   declarations: [
     SecureComponent,
     EuropeComponent,
-    AsiaComponent
+    AsiaComponent,
+    SideNavComponent
   ],
   imports: [
     CommonModule,

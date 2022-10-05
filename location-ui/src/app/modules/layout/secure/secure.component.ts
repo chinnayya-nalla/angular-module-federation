@@ -10,15 +10,8 @@ import { MatSidenavService } from '../../shared/service/mat-sidenav.service';
 })
 export class SecureComponent implements OnInit {
 
-  public onSideNavChange: boolean = true;
+  constructor(public matSidenavService:  MatSidenavService) {}
 
-  constructor(public matSidenavService:  MatSidenavService) { 
-    this.matSidenavService.sideNavState$.subscribe((res) => {
-      this.onSideNavChange = res;
-    });
-  }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

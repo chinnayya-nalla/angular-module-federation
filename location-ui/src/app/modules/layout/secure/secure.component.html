@@ -1,14 +1,15 @@
 <button mat-icon-button color="primary" 
-    (click)="matSidenavService.onSinenavToggle()"
-    [@onCollapseBtnChange]="onSideNavChange ? 'open' : 'close'"
+    (click)="matSidenavService.toogle()"
+    [@onCollapseBtnChange]="matSidenavService.state ? 'open' : 'close'"
     [ngClass]="{
-        showLeftIcon: matSidenavService.sideNavState,
-        showRightIcon: !matSidenavService.sideNavState,
+        showLeftIcon: matSidenavService.state,
+        showRightIcon: !matSidenavService.state,
         sidebarCollapseBtn: true
     }">
-    <mat-icon *ngIf="matSidenavService.sideNavState">arrow_left</mat-icon>
-    <mat-icon *ngIf="!matSidenavService.sideNavState">arrow_right</mat-icon>
+    <mat-icon *ngIf="matSidenavService.state">arrow_left</mat-icon>
+    <mat-icon *ngIf="!matSidenavService.state">arrow_right</mat-icon>
 </button>
+
 <mat-sidenav-container class="sidenav-container" style="z-index:auto;" hasBackdrop="false">
     
     <mat-sidenav 
@@ -17,72 +18,12 @@
         [opened]="true"
         class="fixedSidenav">
         
-        <!-- Start of Test Code -->
-        <div class="sidenav_container"
-            [@onSideNavChange]="matSidenavService.sideNavState ? 'open' : 'close'">
-
-            <div class="px-2 my-2 d-flex align-items-center" [ngClass]="matSidenavService.linkText ? 'justify-content-start' : 'justify-content-center'">
-                <img src="https://catest-community.cargoes.com/images/icons/Container_Enquiry.svg" width="32" />
-                <div mat-line class="pl-2 sidenavTitle" [@animateText]="matSidenavService.linkText ? 'show' : 'hide'">
-                    Container Clearance
-                </div>
-            </div>
-
-            <mat-nav-list class="px-2">
-                <div mat-subheader class="py-2" [ngClass]="{ customHeight32: !matSidenavService.linkText }">
-                    <span [@animateText]="matSidenavService.linkText ? 'show' : 'hide'"> Search </span>
-                </div>
-                <a mat-list-item class="py-1 my-1 text-primary-100 handCursor rounded"
-                    routerLink="./europe"
-                    routerLinkActive="active">
-                    <mat-icon mat-list-icon class="d-flex align-items-center">
-                        <img src="https://catest-community.cargoes.com/images/icons/Container_Enquiry.svg" style="width: 100%;" />
-                    </mat-icon>
-                    <div mat-line class="pl-2" [@animateText]="matSidenavService.linkText ? 'show' : 'hide'">
-                        Containers
-                    </div>
-                </a>
-                <a mat-list-item class="py-1 my-1 text-primary-100 handCursor rounded"
-                    routerLink="./asia"
-                    routerLinkActive="active">
-                    <mat-icon mat-list-icon class="d-flex align-items-center">
-                        <img src="https://catest-community.cargoes.com/images/icons/Container_Enquiry.svg" style="width: 100%;" />
-                    </mat-icon>
-                    <div mat-line class="pl-2" [@animateText]="matSidenavService.linkText ? 'show' : 'hide'">
-                        Containers
-                    </div>
-                </a>
-                <mat-divider></mat-divider>
-            </mat-nav-list>
-
-
-            <div class="sidenavFooter">
-                <mat-list role="list">
-                    <mat-divider></mat-divider>
-                    <mat-list-item role="listitem" class="py-1 my-1 text-primary-100 handCursor rounded"
-                        [ngClass]="{ 'd-flex justify-content-center' : !matSidenavService.linkText }">
-                        <mat-icon mat-list-icon class="pl-1">help_outline</mat-icon>
-                        <div mat-line class="pl-2" [@animateText]="matSidenavService.linkText ? 'show' : 'hide'">
-                          Help & Support
-                        </div>
-                      </mat-list-item>
-                      <mat-list-item role="listitem" class="py-1 my-1 text-primary-100 handCursor rounded" style="font-size: 12px;"
-                        [ngClass]="{ 'd-flex justify-content-center' : !matSidenavService.linkText }">
-                        <mat-icon mat-list-icon class="pl-1" style="font-size: 18px;height:18px;width: 22px;margin-left: 3px;">copyright</mat-icon>
-                        <div mat-line class="pl-2" [@animateText]="matSidenavService.linkText ? 'show' : 'hide'">
-                          Terms & Conditions
-                        </div>
-                      </mat-list-item>
-                </mat-list>
-            </div>
-
-        </div>
-        <!-- End of Test Code -->
+        <app-side-nav></app-side-nav>
 
     </mat-sidenav>
     
     <mat-sidenav-content 
-        [@onMainContentChange]="onSideNavChange ? 'open' : 'close'"
+        [@onMainContentChange]="matSidenavService.state ? 'open' : 'close'"
         style="z-index:auto; overflow: hidden; margin-left: 240px;">
         <div class="col-12">
             <router-outlet></router-outlet>
