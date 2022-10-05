@@ -13,6 +13,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar'
 import { MatPaginatorModule } from '@angular/material/paginator'
 import { MatCardModule } from '@angular/material/card'
 import { MatTableModule } from '@angular/material/table'
+import { MatExpansionModule } from '@angular/material/expansion'
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { MatTableModule } from '@angular/material/table'
     MatProgressBarModule,
     MatPaginatorModule,
     MatCardModule,
-    MatTableModule
+    MatTableModule,
+    MatExpansionModule
   ],
   exports: [
     MatSidenavModule,
@@ -45,7 +47,8 @@ import { MatTableModule } from '@angular/material/table'
     MatProgressBarModule,
     MatPaginatorModule,
     MatCardModule,
-    MatTableModule
+    MatTableModule,
+    MatExpansionModule
   ]
 })
 export class AppMaterialModule { }
