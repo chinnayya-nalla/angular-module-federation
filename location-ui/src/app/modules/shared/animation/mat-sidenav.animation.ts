@@ -4,7 +4,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 export const toggleSideNav = trigger('toggleSideNav', [
   state('close',
     style({
-      'min-width': '50px'
+      'min-width': '68px'
     })
   ),
   state('open',
@@ -53,7 +53,7 @@ export const toggleContent = trigger('toggleContent', [
 export const toggleSideNavButton = trigger('toggleSideNavButton', [
   state('close',
     style({
-      'left': '47px'
+      'left': '57px'
     })
   ),
   state('open',

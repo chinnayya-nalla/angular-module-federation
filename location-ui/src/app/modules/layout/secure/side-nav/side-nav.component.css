@@ -1,28 +1,3 @@
-.sidenav_container{
-    min-width: 60px;
-}
-.sidebarCollapseBtn {
-    background-color: #8b9daf;
-    transform: translateY(-45%);
-    position: fixed;
-    z-index: 4;
-    top:85px
-}
-.sidebarCollapseBtn, .sidebarCollapseBtn .mat-icon{
-    height: 20px!important;
-    width: 20px!important;
-    line-height: 18px!important;
-    color: var(--white);
-    font-size: 20px;
-}
-.fixedSidenav{
-    position:fixed!important;
-    top: 65px!important;
-    min-height: calc(100vh - 65px);
-    border-right: 1px solid rgba(0,0,0,.12);
-    box-shadow: none;
-}
-
 .customHeight32{
     height: 32px!important;
 }

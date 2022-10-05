@@ -5,7 +5,7 @@ import { MatIconModule } from '@angular/material/icon'
 import { MatListModule } from '@angular/material/list'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input'
-import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select'
 
 
@@ -17,7 +17,8 @@ import { MatSelectModule } from '@angular/material/select'
     MatListModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatButtonModule
   ],
   exports: [
     MatSidenavModule,
@@ -25,7 +26,8 @@ import { MatSelectModule } from '@angular/material/select'
     MatListModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatButtonModule
   ]
 })
 export class AppMaterialModule { }
