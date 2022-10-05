@@ -29,7 +29,11 @@
 						"styles": [
 							"./node_modules/bootstrap/dist/css/bootstrap.css",
 							"./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-							"src/styles.css"
+							"src/styles.css",
+							"src/assets/css/style-global.css",
+							"src/assets/css/style-theme.css",
+							"src/assets/css/styles.css",
+							"src/assets/css/theme-variables.css"
 						],
 						"scripts": [
 							"./node_modules/jquery/dist/jquery.js",
