@@ -1,7 +1,7 @@
 <div class="row mt-3">
     <div class="col-md-12">
       <h5 class="text-primary-100">
-        Europe
+        Export/Storage Unit Search
       </h5>
     </div>
 </div>
@@ -11,7 +11,7 @@
 
         <form>
             <div class="row clearfix justify-content-start">
-              <div class="col-md-4">
+              <div class="col-md-7">
                 <mat-form-field appearance="outline" class="_fullWidth">
                   <mat-label class="position-relative pl-4">
                     <mat-icon class="position-absolute font-weight-bold" style="top: 0; left:0; font-size: 18px;">
@@ -22,16 +22,55 @@
                   <input matInput formControlName="containers" />
                 </mat-form-field>
               </div>
+
+              <div class="col-md-3">
+                <mat-form-field appearance="outline" class="_fullWidth">
+                  <mat-label>
+                    Billing Container
+                  </mat-label>
+                  <input matInput formControlName="billing" />
+                </mat-form-field>
+              </div>
+
+              <div class="col-md-2 d-flex align-items-center" style="padding-bottom: 1.34375em;">
+                <mat-button-toggle-group class="searchToggleBtns">
+                  <mat-button-toggle value="search" color="primary" >
+                    <mat-icon>search</mat-icon>
+                  </mat-button-toggle>
+                  <mat-button-toggle class="bg-white">
+                    <mat-icon class="text-black-high">clear_all</mat-icon>
+                  </mat-button-toggle>
+                  <mat-button-toggle class="bg-white">
+                    <mat-icon class="text-black-high icon-small" *ngIf="showMore">expand_less</mat-icon>
+                    <mat-icon class="text-black-high icon-small" *ngIf="!showMore">expand_more</mat-icon>
+                  </mat-button-toggle>
+                </mat-button-toggle-group>
+              </div>
+
             </div>
         </form>
 
-        <img class="img-responsive" src="http://localhost:4100/assets/images/image1.png" />
-        <ul >
-            <li>Germany</li>
-            <li>France</li>
-            <li>Scotland</li>
-            <li>Ireland</li>
-        </ul>
+        <div class="row mb-3">
+          <div class="col-md-12">
+              <mat-chip-list aria-label="filters">
+                  <mat-chip color="primary" class="d-flex align-items-center">
+                      APLCU000012
+                      <button mat-icon-button class="ml-2" style="height: 40px">
+                          <mat-icon>cancel</mat-icon>
+                      </button>
+                  </mat-chip>
+              </mat-chip-list>
+          </div>
+        </div>
+
+        <div class="m-auto">
+          <div class="mw-display-2 d-flex justify-content-center text-center">
+            Data is Loading
+          </div>
+          <div class="progress-bar-loader d-flex justify-content-center">
+            <mat-progress-bar class="progress-bar-width" mode="indeterminate"></mat-progress-bar>
+          </div>
+        </div>
 
         <div class="row my-4">
             <div class="col-md-12 d-flex align-items-center flex-column py-5">
@@ -44,6 +83,79 @@
             </div>
         </div>
 
+        <div class="row mb-3">
+          <div class="col-md-12">
+            <mat-card class="p-0">
+
+              <div class="row">
+                <div class=" col-lg-12 d-flex align-items-center justify-content-between">
+                  <p class="p-3 subtitle m-0 text-primary-100">
+                    Search Results
+                  </p>
+                  <button mat-icon-button class="mr-3">
+                    <mat-icon>refresh</mat-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="table-responsive-card">
+                    <table mat-table matSort [dataSource]="dataSource" class="table tableCustomHeadBorder">
+                      
+                      <!-- Position Column -->
+                      <ng-container matColumnDef="position">
+                        <th mat-header-cell *matHeaderCellDef> No. </th>
+                        <td mat-cell *matCellDef="let element"> 
+                          <span class="mobile-label">
+                            {{element.position}}
+                          </span>
+                          <a routerLink="./"> {{ element.position }} </a>
+                        </td>
+                      </ng-container>
+
+                      <!-- Name Column -->
+                      <ng-container matColumnDef="name">
+                        <th mat-header-cell *matHeaderCellDef> Name </th>
+                        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                      </ng-container>
+
+                      <!-- Weight Column -->
+                      <ng-container matColumnDef="weight">
+                        <th mat-header-cell *matHeaderCellDef> Weight </th>
+                        <td mat-cell *matCellDef="let element"> 
+                          <span class="mobile-label">
+                            {{element.weight}}
+                          </span>
+                          <span [ngClass]="element.name">
+                            {{element.weight}}
+                          </span>
+                        </td>
+                      </ng-container>
+
+                      <!-- Symbol Column -->
+                      <ng-container matColumnDef="symbol">
+                        <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                        <td mat-cell *matCellDef="let element"> {{element.symbol | uppercase }} </td>
+                      </ng-container>
+                      
+                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+                    </table>
+        
+                    <mat-paginator 
+                      [length]="totalRecords"
+                      [pageSizeOptions]="[5, 10, 20, 50, 100]"
+                      [pageSize]="filters.pageSize"
+                      [pageIndex]="filters.pageNumber - 1">
+                    </mat-paginator>
+
+                  </div>
+                </div>
+              </div>
+            </mat-card>
+          </div>
+        </div>
+        
     </div>
 </div>
-

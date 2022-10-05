@@ -1,0 +1,15 @@
+.processing {
+    color: var(--primary-color-100)
+}
+
+.rejected {
+    color: var(--error-medium)
+}
+
+.transmitted {
+    color: var(--success-dark)
+}
+
+.transmitted_with_error {
+    color: var(--warning-dark)
+}
