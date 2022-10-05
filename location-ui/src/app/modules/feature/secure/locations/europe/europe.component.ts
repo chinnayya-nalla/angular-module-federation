@@ -27,6 +27,10 @@ export class EuropeComponent implements AfterViewInit {
   }
   
 
+  public toogleShowMore() {
+    this.showMore = !this.showMore;
+  }
+
 }
 
 export interface PeriodicElement {

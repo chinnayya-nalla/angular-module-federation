@@ -1,3 +1,17 @@
+<div class="_header error-flex">
+  <div class="d-msg d-flex justify-content-center align-items-center pt-4">
+    <div class="pr-4 d-flex align-items-center">
+      <mat-icon class="mw-success-dark">check_circle</mat-icon>
+    </div>
+    <div class="pr-4 dismiss-error">
+      Error Message Block
+    </div>
+    <div class="cursor mw-button mw-black-high d-flex align-items-center">
+      Close
+    </div>
+  </div>
+</div>
+
 <div class="row mt-3">
     <div class="col-md-12">
       <h5 class="text-primary-100">
@@ -40,7 +54,7 @@
                   <mat-button-toggle class="bg-white">
                     <mat-icon class="text-black-high">clear_all</mat-icon>
                   </mat-button-toggle>
-                  <mat-button-toggle class="bg-white">
+                  <mat-button-toggle class="bg-white" (click)="toogleShowMore()">
                     <mat-icon class="text-black-high icon-small" *ngIf="showMore">expand_less</mat-icon>
                     <mat-icon class="text-black-high icon-small" *ngIf="!showMore">expand_more</mat-icon>
                   </mat-button-toggle>
@@ -48,6 +62,16 @@
               </div>
 
             </div>
+
+            <div class="row">
+              <div class="col-lg-2 col-md-12" *ngIf="showMore">
+                <mat-form-field appearance="outline" class="_fullWidth">
+                  <mat-label> Hidden Field </mat-label>
+                  <input matInput formControlName="billaing" />
+                </mat-form-field>
+              </div>
+            </div>
+
         </form>
 
         <div class="row mb-3">
