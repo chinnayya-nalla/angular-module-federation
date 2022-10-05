@@ -1,0 +1,12 @@
+.mat-expansion-panel {
+    padding: 12px 24px;
+}
+
+.mat-expansion-panel-header .mat-expansion-panel-header-title .mat-icon {
+    margin-right: 12px;
+}
+
+.mat-expansion-panel-header .mat-expansion-panel-header-title {
+    color: var(--primary-color-100);
+    align-items: center;
+}
